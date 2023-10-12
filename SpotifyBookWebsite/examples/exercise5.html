@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Acme Corporation Feedback</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form action="https://student2.cs.appstate.edu/crr/3440/homework/h3/contact/"
+        method="post">
+    <fieldset>
+        <legend>Send Us Feedback</legend>
+        <label>To:<br />
+            <input type="text" name="emailTo" /></label><br />
+        <label>Email:<br />
+            <input type="text" name="emailFrom" required="required" /></label><br />
+        <label>Message:<br />
+            <textarea name="emailBody" cols="20" rows="5" 
+            placeholder="Type your message here..." required="required"></textarea>  
+            </label><br />
+    </fieldset>
+
+    <fieldset>
+        <legend>Survey Questions</legend>
+        <label>How did you hear about us?<br />
+            <select name="referrer">
+                <option value="google">Google</option>
+                <option value="ad">Ad</option>
+                <option value="friend">Friend</option>
+                <option value="other">Other</option>
+            </select>
+        </label><br />
+        <br>
+        <label>Would you like to recieve our newsletter?<br />
+            <input type="checkbox" name="newsletter" 
+                checked="checked" /> Yes please. Send me the newsletter.
+        </label><br />
+    </fieldset>
+
+    <fieldset>
+        <legend>Rate Our Service</legend>
+        <input type="radio" name="rating" value="1" />Very Poor<br />
+        <input type="radio" name="rating" value="2" />Poor<br />
+        <input type="radio" name="rating" value="3" />Average<br />
+        <input type="radio" name="rating" value="4" />Good<br />
+        <input type="radio" name="rating" value="5" />Very Good<br />
+    </fieldset>
+    <input type="submit" name="send message" value="Send Message" />
+    </form>
+</body>
+</html>
