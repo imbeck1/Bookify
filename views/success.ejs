@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Success</title>
+    <link rel="stylesheet" href='styles/success.css'>
+    <script>
+        function redirectToHome() {
+            wondow.location.href = "/homepage";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>You have successfully created your Bookify playlist!</h1>
+    </header>
+
+    <h2 class="playlist">Playlist</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Playlist Name</th>
+                <th>Playlist Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% playlists.items.forEach(p => { %>
+                <tr>
+                    <td><%= p.name %></td>
+                    <td><a href="<%= p.external_urls.spotify %>">Click Here!</a></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <div class="home" onclick="redirectToHome()">
+        <h2> <a href="/homepage">Return Home</a></h2>
+    </div>
+    
+</body>
+</html>
+

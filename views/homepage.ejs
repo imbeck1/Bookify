@@ -1,28 +1,51 @@
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Bookify Home</title>
-        <link rel="stylesheet" href='styles/homepage.css'>
-    </head>
-    <body>
-        <header>
-            <h1>Home</h1>
-            <h2><%= userName %>'s Most Recently Liked Tracks</h2>
-            <ul>
-                <% track.items.forEach(t => { %>
-                    <li><%= t.track.name %> <a href="<%= t.track.preview_url %>">Preview</a></li>
-                <% }); %>
-            </ul>
-            <h2><%= userName %>'s Playlists</h2>
-            <ul>
-                <% playlists.items.forEach(p => { %>
-                    <li><%= p.name %> <a href="<%= p.external_urls.spotify %>">Playlist Link</a></li></li>
-                <% }); %>
-            </ul>
-            <form method="post" action="/createPlaylist">
-                <button type="submit">Create Playlist</button>
-            </form>
-            
-        </header>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <title>Bookify Home</title>
+    <link rel="stylesheet" href='styles/homepage.css'>
+</head>
+<body>
+    <header>
+        <h1>Bookify Home</h1>
+    </header>
+        
+    <form action="/success" method="post">
+        <label for="variableInput">Enter Book Name:</label>
+        <input type="text" id="variableInput" name="userVariable" required>
+        <button type="submit">Create Your Playlist</button>
+    </form>
+
+    <h2><%= userName %>'s Bookify Created Playlists</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Playlist Name</th>
+                <th>Playlist Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% playlists.items.forEach(p => { %>
+                <% if (p.name.startsWith("Your Bookify Created")) { %>
+                    <tr>
+                        <td><%= p.name %></td>
+                        <td><a href="<%= p.external_urls.spotify %>">Click Here</a></td>
+                    </tr>
+                <% } %>
+            <% }); %>
+        </tbody>
+    </table>
+
+    
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+    
+        if (error === 'invalidBook') {
+            alert('Please enter a valid book.');
+        }
+    </script>
+</body>
 </html>
+
+

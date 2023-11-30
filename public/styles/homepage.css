@@ -1,0 +1,130 @@
+body {
+    background: linear-gradient(45deg, rgb(37, 185, 0), rgb(179, 0, 179), rgb(1, 1, 151));
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: absolute;
+    top: 0%;
+    right: 0px;
+    width: 100%;
+    height: 200px;
+    padding: 0px;
+    
+    font-family: Spotify Circular;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(179, 0, 179);   
+    
+    background: linear-gradient(to bottom, rgb(1, 1, 151), rgb(1, 1, 151), rgb(1, 1, 151), rgb(1, 1, 151), rgba(0, 0, 0, 0.0));
+}
+
+h1 {
+    margin-top: 60px;
+    line-height: 75%;
+}
+
+h2 {
+    position: absolute;
+    top: 53%;
+    left: 32%;
+
+    font-family: Spotify Circular;
+    font-size: 40px;
+    color:rgb(37, 185, 0);
+    text-shadow: 1px 1px 1px black;
+}
+
+table {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 700px;
+    height: 100px;
+    border: 5px solid rgb(37, 185, 0); /* Color and width of the outline */
+    background-color: rgb(51, 50, 50);
+    border-radius: 15px; /* Controls the roundness of the edges */
+
+    font-family: Spotify Circular;
+    font-size: 20px;
+    text-align: left;
+    color: rgb(37, 185, 0);
+}
+
+a {
+    color: rgb(179, 0, 179);
+    text-decoration: none;
+}
+
+th {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: underline;
+}
+
+@font-face {
+    font-family: 'Spotify Circular';
+    src: url('../fonts/CircularSpotifyText-Black.otf');
+}
+
+@font-face {
+    font-family: 'L Spotify Circular';
+    src: url('../fonts/CircularSpotifyText-Light.otf');
+}
+
+form {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    
+}
+
+label {
+    font-family: Spotify Circular;
+    color: rgb(37, 185, 0);
+    
+    -webkit-text-stroke: 2px rgb(51, 50, 50);
+    font-size: 50px;
+}
+
+input {
+    border: 2px solid rgb(51, 50, 50); 
+    border-radius: 4px; 
+
+    width: 500px;
+
+    font-size: 30px;
+
+    font-family: Spotify Circular;
+    background-color: rgb(51, 50, 50);
+    color:rgb(37, 185, 0);
+}
+
+/* Style for when the input is focused (clicked) */
+
+button {
+    width: 400px;
+    height: 70px;
+    position: absolute;
+    top: 120%;
+    left: 25%;
+    
+    border: 3px solid rgb(37, 185, 0); /* Color and width of the outline */
+    background-color: rgb(51, 50, 50);
+    border-radius: 10px; /* Controls the roundness of the edges */
+
+    font-family: Spotify Circular;
+    font-size: 35px;
+    text-align: center;
+    color: rgb(37, 185, 0);
+
+    cursor: pointer;
+}
