@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-    apiKey: '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'
+    apiKey: 'yourOpenAIAPIKeyString'
 });
 
 const app = express();
